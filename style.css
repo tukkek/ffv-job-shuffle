@@ -1,0 +1,9 @@
+h1{text-align:center;}
+#generator{
+  background-color:gray;
+  margin:auto 10%;
+  text-align:center;
+  border-radius:2em;
+  padding:1em;
+}
+button#generate{margin:1em;}

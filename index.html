@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Job shuffle!</title>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Job Shuffle for Final Fantasy V</h1>
+    <h2>Rules</h2>
+    <ul>
+      <li>You may roll for new jobs whenever:
+        <ol>
+          <li>You unlock a new crystal.</li>
+          <li>A party member masters their current job.</li>
+          <li>Cara joins your party.</li>
+          <li>You enter the Void.</li>
+        </ol>
+      </li>
+      <li>You can choose to roll from one to four jobs each time. Rolling less jobs results in an increased challenge.</li>
+      <li>For each resulting job (including repeat ones) you may either apply it to any one character or discard it.</li>
+      <li>When Cara joins or a character maxes a job, only that character may take a job - ignore all of the unused jobs.</li>
+      <li>Party members may become Freelancers (or Mimes) at any time but cannot swap jobs again until a new roll is made.</li>
+    </ul>
+    <div id='generator'>
+      <h2>Generator</h2>
+      <div class='settings'>
+        <h3>Crystals unlocked</h3>
+        <label><input type='checkbox' id='wind' checked/> Wind crystal</label>
+        <label><input type='checkbox' id='water'/> Water crystal</label>
+        <label><input type='checkbox' id='fire'/> Fire crystal</label>
+        <label><input type='checkbox' id='earth'/> Earth crystal</label>
+        <label><input type='checkbox' id='sealed'/> Sealed temple</label>
+      </div>
+      <div class='settings'>
+        <h3>Amount of jobs to roll</h3>
+        <label><input type='radio' name='amount' value='1'/> 1</label>
+        <label><input type='radio' name='amount' value='2'/> 2</label>
+        <label><input type='radio' name='amount' value='3'/> 3</label>
+        <label><input type='radio' name='amount' value='4' checked/> 4</label>
+      </div>
+      <button id='generate'>Roll!</button>
+      <h3>Results</h3>
+      <div id='results'>Nothing yet...</div>
+    </div>
+    <h2>Rationale</h2>
+    <p>Directly inspired by the extremely successful <a href='http://fourjobfiesta.com/help.php' target='_blank'>Four Job Fiesta challenge</a>, Job Shuffle aims to improve on two particular areas: quality-of-life and strategy.</p>
+    <p><strong>Quality-of-life (viability):</strong> while it's been proven that every possible four-job combination can win the game, a lot of those can be extremely difficult, time-consuming and/or require utmost knowledge of every aspect of the game. Perhaps more than that, the Four Job Fiesta largely discards Final Fantasy V's greatest strength: the diversity and richness of the job system, by limiting players to only four jobs per run. The Job Shuffle is designed to play upon the strenghts of the game while dodging most "roadblocks" that one can encounter when limited to very few jobs.</p>
+    <p><strong>Strategy:</strong> while there certainly is strategy in the Four Job Fiesta, it mostly comes from post-fact mitigation ("What do I need to do to beat Biblos now that I have an all-physical party"). Job Shuffle has a different approach to strategy, again closer to that intended by Squaresoft, by allowing you to tailor your party with limited choices for the challenges ahead.</p>
+    <p>This new approach does not aim in any way to deride or replace the Four Job Fiesta but instead to present a new challenge mode that is more viable and less demanding, while still celebrating the diversity of possibilties and joy of replaying this beloved entry to the Final Fantasy series!</p>
+    <h2>See also</h2>
+    <ul>
+      <li><a target='_blank' href='https://www.bigbridge.studio/projectdemi/'>Project Demi</a></li>
+      <li><a target='_blank' href='https://www.bigbridge.studio/careerday/'>Career day</a></li>
+      <li><a target='_blank' href='https://tukkek.github.io/Enkibot/'>Enkibot (my fork)</a></li>
+      <li><a target='_blank' href='https://github.com/tukkek/grand_cross'>Grand cross (my fork)</a></li>
+    </ul>
+  </body>
+  <script type='module'>
+    import * as generator from './generator.js'
+    generator.setup()
+  </script>
+</html>
